@@ -1,0 +1,7 @@
+FROM redis:latest
+
+# Copy your local redis.conf into the container's /usr/local/etc/redis directory
+COPY redis.conf /usr/local/etc/redis/redis.conf
+
+# Start Redis with your custom config file
+CMD ["redis-server", "/usr/local/etc/redis/redis.conf"]
